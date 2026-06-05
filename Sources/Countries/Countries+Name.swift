@@ -42,7 +42,7 @@ extension Country {
         case "Cambodia": self = .cambodia
         case "Cameroon": self = .cameroon
         case "Canada": self = .canada
-        case "Cape Verde": self = .capeVerde
+        case "Cabo Verde", "Cape Verde": self = .capeVerde
         case "Cayman Islands": self = .caymanIslands
         case "Central African Republic": self = .centralAfricanRepublic
         case "Chad": self = .chad
@@ -60,7 +60,7 @@ extension Country {
         case "Croatia": self = .croatia
         case "Cuba": self = .cuba
         case "Cyprus": self = .cyprus
-        case "Czech Republic": self = .czechRepublic
+        case "Czechia", "Czech Republic": self = .czechRepublic
         case "Denmark": self = .denmark
         case "Djibouti": self = .djibouti
         case "Dominica": self = .dominica
@@ -72,7 +72,7 @@ extension Country {
         case "Eritrea": self = .eritrea
         case "Estonia": self = .estonia
         case "Ethiopia": self = .ethiopia
-        case "Falkland Islands (Malvinas": self = .falklandIslandsMalvinas
+        case "Falkland Islands (Malvinas)", "Falkland Islands (Malvinas": self = .falklandIslandsMalvinas
         case "Faroe Islands": self = .faroeIslands
         case "Fiji": self = .fiji
         case "Finland": self = .finland
@@ -93,11 +93,11 @@ extension Country {
         case "Guatemala": self = .guatemala
         case "Guernsey": self = .guernsey
         case "Guinea": self = .guinea
-        case "Guineabissau": self = .guineabissau
+        case "Guinea-Bissau", "Guineabissau": self = .guineabissau
         case "Guyana": self = .guyana
         case "Haiti": self = .haiti
         case "Heard Island and Mcdonald Islands": self = .heardIslandAndMcdonaldIslands
-        case "Holy See (Vatican City State": self = .holySeeVaticanCityState
+        case "Holy See (Vatican City State)", "Holy See (Vatican City State": self = .holySeeVaticanCityState
         case "Honduras": self = .honduras
         case "Hong Kong": self = .hongKong
         case "Hungary": self = .hungary
@@ -131,7 +131,7 @@ extension Country {
         case "Lithuania": self = .lithuania
         case "Luxembourg": self = .luxembourg
         case "Macao": self = .macao
-        case "Macedonia": self = .macedonia
+        case "North Macedonia", "Macedonia": self = .macedonia
         case "Madagascar": self = .madagascar
         case "Malawi": self = .malawi
         case "Malaysia": self = .malaysia
@@ -210,7 +210,7 @@ extension Country {
         case "Sudan": self = .sudan
         case "Suriname": self = .suriname
         case "Svalbard and Jan Mayen": self = .svalbardAndJanMayen
-        case "Swaziland": self = .swaziland
+        case "Eswatini", "Swaziland": self = .swaziland
         case "Sweden": self = .sweden
         case "Switzerland": self = .switzerland
         case "Syrian Arab Republic": self = .syrianArabRepublic
@@ -224,7 +224,7 @@ extension Country {
         case "Tonga": self = .tonga
         case "Trinidad and Tobago": self = .trinidadAndTobago
         case "Tunisia": self = .tunisia
-        case "Turkey": self = .turkey
+        case "Türkiye", "Turkey": self = .turkey
         case "Turkmenistan": self = .turkmenistan
         case "Turks and Caicos Islands": self = .turksAndCaicosIslands
         case "Tuvalu": self = .tuvalu
@@ -237,13 +237,17 @@ extension Country {
         case "Vanuatu": self = .vanuatu
         case "Venezuela": self = .venezuela
         case "Viet Nam": self = .vietNam
-        case " British Virgin Islands": self = .virginIslandsUK
+        case "British Virgin Islands": self = .virginIslandsUK
         case "United States Virgin Islands": self = .virginIslandsUS
         case "Wallis and Futuna": self = .wallisAndFutuna
         case "Western Sahara": self = .westernSahara
         case "Yemen": self = .yemen
         case "Zambia": self = .zambia
         case "Zimbabwe": self = .zimbabwe
+        case "South Sudan": self = .southSudan
+        case "Curaçao": self = .curacao
+        case "Sint Maarten": self = .sintMaarten
+        case "Bonaire, Sint Eustatius and Saba": self = .bonaireSintEustatiusAndSaba
         case "All Countries": self = .allCountries
         default: return nil
         }
