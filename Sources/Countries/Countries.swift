@@ -157,6 +157,10 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     case nauru = "NR"
     case nepal = "NP"
     case netherlands = "NL"
+    /// Dissolved in 2010 into Curaçao, Sint Maarten and the Caribbean Netherlands
+    /// (Bonaire, Sint Eustatius and Saba). Retained for backwards compatibility; `AN`
+    /// is a transitionally reserved ISO 3166-1 code. Prefer `.curacao`, `.sintMaarten`
+    /// or `.bonaireSintEustatiusAndSaba`.
     case netherlandsAntilles = "AN"
     case newCaledonia = "NC"
     case newZealand = "NZ"
@@ -170,7 +174,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     case oman = "OM"
     case pakistan = "PK"
     case palau = "PW"
-    case palestinianTerritory = "NULL"
+    case palestinianTerritory = "PS"
     case panama = "PA"
     case papuaNewGuinea = "PG"
     case paraguay = "PY"
@@ -244,7 +248,13 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     case yemen = "YE"
     case zambia = "ZM"
     case zimbabwe = "ZW"
-    
+
+    // MARK: - Cases added after the Netherlands Antilles dissolution (2010) and South Sudan independence (2011)
+    case southSudan = "SS"
+    case curacao = "CW"
+    case sintMaarten = "SX"
+    case bonaireSintEustatiusAndSaba = "BQ"
+
     case allCountries = "ALL"
     
     public init(from decoder: Decoder)throws {
@@ -313,7 +323,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .cambodia: return "Cambodia"
         case .cameroon: return "Cameroon"
         case .canada: return "Canada"
-        case .capeVerde: return "Cape Verde"
+        case .capeVerde: return "Cabo Verde"
         case .caymanIslands: return "Cayman Islands"
         case .centralAfricanRepublic: return "Central African Republic"
         case .chad: return "Chad"
@@ -331,7 +341,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .croatia: return "Croatia"
         case .cuba: return "Cuba"
         case .cyprus: return "Cyprus"
-        case .czechRepublic: return "Czech Republic"
+        case .czechRepublic: return "Czechia"
         case .denmark: return "Denmark"
         case .djibouti: return "Djibouti"
         case .dominica: return "Dominica"
@@ -343,7 +353,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .eritrea: return "Eritrea"
         case .estonia: return "Estonia"
         case .ethiopia: return "Ethiopia"
-        case .falklandIslandsMalvinas: return "Falkland Islands (Malvinas"
+        case .falklandIslandsMalvinas: return "Falkland Islands (Malvinas)"
         case .faroeIslands: return "Faroe Islands"
         case .fiji: return "Fiji"
         case .finland: return "Finland"
@@ -364,11 +374,11 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .guatemala: return "Guatemala"
         case .guernsey: return "Guernsey"
         case .guinea: return "Guinea"
-        case .guineabissau: return "Guineabissau"
+        case .guineabissau: return "Guinea-Bissau"
         case .guyana: return "Guyana"
         case .haiti: return "Haiti"
         case .heardIslandAndMcdonaldIslands: return "Heard Island and Mcdonald Islands"
-        case .holySeeVaticanCityState: return "Holy See (Vatican City State"
+        case .holySeeVaticanCityState: return "Holy See (Vatican City State)"
         case .honduras: return "Honduras"
         case .hongKong: return "Hong Kong"
         case .hungary: return "Hungary"
@@ -402,7 +412,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .lithuania: return "Lithuania"
         case .luxembourg: return "Luxembourg"
         case .macao: return "Macao"
-        case .macedonia: return "Macedonia"
+        case .macedonia: return "North Macedonia"
         case .madagascar: return "Madagascar"
         case .malawi: return "Malawi"
         case .malaysia: return "Malaysia"
@@ -481,7 +491,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .sudan: return "Sudan"
         case .suriname: return "Suriname"
         case .svalbardAndJanMayen: return "Svalbard and Jan Mayen"
-        case .swaziland: return "Swaziland"
+        case .swaziland: return "Eswatini"
         case .sweden: return "Sweden"
         case .switzerland: return "Switzerland"
         case .syrianArabRepublic: return "Syrian Arab Republic"
@@ -495,7 +505,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .tonga: return "Tonga"
         case .trinidadAndTobago: return "Trinidad and Tobago"
         case .tunisia: return "Tunisia"
-        case .turkey: return "Turkey"
+        case .turkey: return "Türkiye"
         case .turkmenistan: return "Turkmenistan"
         case .turksAndCaicosIslands: return "Turks and Caicos Islands"
         case .tuvalu: return "Tuvalu"
@@ -515,6 +525,10 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .yemen: return "Yemen"
         case .zambia: return "Zambia"
         case .zimbabwe: return "Zimbabwe"
+        case .southSudan: return "South Sudan"
+        case .curacao: return "Curaçao"
+        case .sintMaarten: return "Sint Maarten"
+        case .bonaireSintEustatiusAndSaba: return "Bonaire, Sint Eustatius and Saba"
         case .allCountries: return "All Countries"
         }
     }

@@ -1,9 +1,5 @@
 import Foundation
 
-#if os(Linux) && !swift(>=3.1)
-    typealias NSRegularExpression = RegularExpression
-#endif
-
 fileprivate var regex: NSRegularExpression!
 
 extension String {
